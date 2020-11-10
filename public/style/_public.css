@@ -1,0 +1,30 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#home {
+  font-size: 12px;
+  font-family: Tahoma, Geneva, sans-serif;
+}
+
+.header {
+  min-width: 960px;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+strong {
+  font-weight: bold;
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}

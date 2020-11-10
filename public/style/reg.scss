@@ -1,0 +1,257 @@
+@charset "utf-8";
+@import "_public";
+input[type=submit] {
+    border: 1px solid #F9477A;
+    display: inline-block;
+    font-family: inherit;
+    word-break: keep-all;
+    background: #F8296D;
+    white-space: nowrap;
+    font-weight: 400;
+    text-align: center;
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0 30px;
+    height: 40px;
+    color: #fff;
+    border: 0;
+    overflow: visible;
+    margin-bottom: 10px;
+}
+
+input:hover {
+    opacity: 0.9;
+}
+
+#logo {
+    height: 85px;
+    width: 960px;
+    margin: 0 auto;
+    #home {
+        width: 360px;
+        height: 85px;
+        overflow: hidden;
+        float: left;
+        font-size: 0;
+        line-height: 0;
+        background: url(https://f1.jmstatic.com/static_passport/dist/v1.0.137928/images/logo_new_v1.jpg) no-repeat top left;
+    }
+    .header_logo_box {
+        display: inline-block;
+        padding-top: 35px;
+        float: right;
+        a.top_link {
+            width: 110px;
+            height: 31px;
+            overflow: hidden;
+            margin-right: 24px;
+            float: right;
+            background: url(../images/header_corn_new_v2.png) no-repeat top center transparent;
+        }
+        a.lightning {
+            background-position: 0 -64px;
+        }
+        a.gild {
+            background-image: url(../images/gild.png);
+            width: 170px;
+        }
+        a.credit {
+            background-position: 0 0;
+        }
+    }
+}
+
+.sign {
+    line-height: 1.5;
+    h1 {
+        font-family: "Microsoft YaHei", 微软雅黑, 黑体;
+    }
+    .loginWrap {
+        margin-top: 120px;
+        margin-bottom: 70px;
+        height: 460px;
+        margin: 100px auto;
+        line-height: 1.5;
+        width: 965px;
+        .loginPic {
+            background: url(../images/signPic.jpg) no-repeat;
+            position: relative;
+            width: 960px;
+            height: 370px;
+            position: relative;
+            .signup_link {
+                display: block;
+                position: absolute;
+                width: 420px;
+                height: 370px;
+            }
+            .loginBord {
+                top: -80px;
+                border: 0;
+                -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, .075);
+                box-shadow: 0 0 4px rgba(0, 0, 0, .075);
+                background: rgba(255, 255, 255, .85);
+                border: 1px solid #ededed;
+                position: absolute;
+                min-height: 400px;
+                padding: 0 23px;
+                width: 310px;
+                color: #333;
+                top: -60px;
+                right: 0;
+                .loginTit {
+                    margin-bottom: 15px;
+                    line-height: 60px;
+                    h1 {
+                        font-weight: 400;
+                        font-size: 20px;
+                        color: #e31256;
+                    }
+                }
+                .invalid {
+                    width: 290px;
+                    white-space: normal;
+                    word-break: normal;
+                    display: none;
+                    height: 1.5em;
+                    left: 20px;
+                    margin-top: 4px;
+                    color: #999;
+                    top: 100%;
+                    position: absolute;
+                    line-height: 1.5;
+                    i {
+                        margin-top: -10px;
+                        height: 20px;
+                        width: 20px;
+                        background-position: 0 -100px;
+                        position: absolute;
+                        left: -20px;
+                        top: 50%;
+                        background-image: url(../images/sign.png);
+                        background-repeat: no-repeat;
+                    }
+                }
+            }
+        }
+        .textbox_ui {
+            margin-bottom: 0;
+            margin-bottom: 26px;
+            vertical-align: middle;
+            display: inline-block;
+            position: relative;
+            input {
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                border: 1px solid #CFCFCF;
+                background-color: #fff;
+                vertical-align: middle;
+                padding: 10px 8px;
+                line-height: 1.5;
+                font-size: 14px;
+                outline: 0;
+                height: auto;
+                width: 284px;
+            }
+            .focus_text {
+                word-break: keep-all;
+                white-space: nowrap;
+                margin-top: 4px;
+                color: #999;
+                top: 105%;
+                left: 0;
+                position: absolute;
+                line-height: 1.5;
+                display: none;
+            }
+            .default {
+                width: 270px;
+            }
+            .safe {
+                position: relative;
+                line-height: 20px;
+                display: none;
+                .pw_level {
+                    float: left;
+                    border-right: 1px solid #fff;
+                    width: 100px;
+                    height: 20px;
+                    text-align: center;
+                    color: #fff;
+                    background: #D0CECC;
+                }
+            }
+        }
+    }
+    .line {
+        height: 44px;
+        margin: 0;
+        margin-bottom: 28px;
+        font-size: 12px;
+        margin: 30px 0;
+        clear: both;
+        color: #333;
+    }
+    .act {
+        margin: 0;
+        margin-bottom: 28px;
+        margin-left: 88px;
+        font-size: 12px;
+        margin: 30px 0;
+        clear: both;
+        color: #333;
+    }
+}
+
+.footer {
+    position: relative;
+    bottom: -1px;
+    overflow: hidden;
+    #footer_copyright {
+        background: #fff;
+        color: #000;
+        text-align: center;
+        line-height: 20px;
+        padding-bottom: 80px;
+        .footer_copy_con {
+            padding: 14px 0 18px;
+            line-height: 23px;
+            a {
+                color: black;
+            }
+        }
+        .footer_copy_logo {
+            width: 126px;
+            height: 50px;
+            overflow: hidden;
+            display: inline-block;
+            margin-right: 8px;
+            background: url(../images/footer_btm_icon.png) no-repeat;
+            border-bottom: 1px solid #d7d7d7;
+        }
+        .logo01 {
+            cursor: default;
+        }
+        .logo02 {
+            background-position: -126px 0;
+        }
+        .logo03 {
+            background-position: -252px 0;
+            cursor: default;
+        }
+        .logo04 {
+            background-position: -378px 0;
+            cursor: default;
+        }
+        .logo05 {
+            background-position: -504px 0;
+        }
+    }
+    .footer_con {
+        width: 1090px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+}
