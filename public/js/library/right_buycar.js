@@ -94,6 +94,7 @@ const creatcar = function() {
     quickPop.delegate('a.ibar_closebtn', 'click', function() {
         quickPop.hide();
         quickPop.animate({ left: 280, queue: true });
+        quickShell.animate({ width: 40, queue: true });
         if (prevTrigger) {
             prevTrigger.removeClass('current');
         }

@@ -4,6 +4,7 @@ import funParabola from './library/goodsflyin.js';
 import creatcar from './library/right_buycar.js';
 import floor from './library/floor.js';
 import './library/jquery.lazyload.min.js';
+import index_rander from './library/index_rander.js';
 
 // 1.购物车飞入
 $(".quick_links_panel li").mouseenter(function() {
@@ -86,3 +87,7 @@ $('.lazy').lazyload({
     effect: 'fadeIn',
     placeholder: "../images/lading.gif",
 });
+
+
+//5.数据渲染
+index_rander();

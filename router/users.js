@@ -32,7 +32,7 @@ router.route('/reg')
                 let md5 = crypto.createHash('md5'); // 创建一个哈希加密
                 let passResult = md5.update(req.body.password).digest('hex'); // 加密内容获得16进制结果
 
-                let sql = `insert into users(username, userpassword) 
+                let sql = `insert into users(username, password) 
         values('${req.body.username}','${passResult}'}')`;
 
 

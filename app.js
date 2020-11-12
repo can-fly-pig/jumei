@@ -6,7 +6,7 @@ const createError = require('http-errors');
 
 const app = express();
 const usersRouter = require('./router/users');
-// const productRouter = require('./router/product');
+const productRouter = require('./router/product');
 
 
 let conf = {
@@ -25,7 +25,7 @@ app.use(cookieParser()); // 读取和设置cookie的中间件
 
 
 app.use('/users', usersRouter);
-// app.use('/product', productRouter);
+app.use('/product', productRouter);
 
 
 // 自定义一个错误中间件

@@ -107,61 +107,6 @@
     box-shadow: 1px 3px 5px rgba(0, 0, 0, .2);
 }
 
-//楼梯
-.home_nav_border {
-    width: 60px;
-    position: fixed;
-    top: 100px;
-    left: 40px;
-    // height: 100%;
-    z-index: 9;
-    opacity: 1;
-    .jumei_idx {
-        // width: 60px;
-        height: 60px;
-        font-size: 14px;
-        background: #fe6397;
-        color: #fff;
-        text-align: center;
-        padding-top: 10px;
-        border-bottom: 1px solid #fff;
-    }
-    ul {
-        border-bottom: 2px solid #fe6397;
-        // width: 60px;
-        // .nav_mustsee {
-        //     .act {
-        //         background-position: -176px 0;
-        //     }
-        // }
-        li {
-            height: 60px;
-            background: white;
-            &:hover span {
-                color: #fe6397;
-            }
-            .act {
-                background: #fe6397;
-                background: url(../images/pc_new.jpg) no-repeat;
-                background-position: -176px 0;
-                span {
-                    color: white;
-                }
-            }
-            a {
-                width: 60px;
-                height: 22px;
-                padding-top: 40px;
-                text-align: center;
-                display: block;
-                color: #8f8f8f;
-                text-decoration: none;
-                background: url(../images/pc_new.jpg) no-repeat;
-            }
-        }
-    }
-}
-
 //头部
 #header {
     width: 100%;
@@ -271,300 +216,90 @@
             }
         }
     }
-    .headerCenter {
-        height: 110px;
-        background: #fff;
-        .logo {
+}
+
+//中间
+.main-top {
+    margin-top: 30px;
+}
+
+.itemlist {
+    list-style: none;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.itemlist>.item {
+    border: 1px solid black;
+    margin: 20px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+
+.itemlist>.item>.p-title {
+    width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.itemlist>.item>.same {
+    padding-top: 25px;
+}
+
+.itemlist>.item>div {
+    margin: 10px;
+}
+
+.cart_header_box {
+    border-bottom: 2px solid #e5e5e5;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+    padding-bottom: 15px;
+    .cart_header {
+        width: 960px;
+        margin: 0 auto;
+        .logo_box {
             float: left;
-            margin-top: 13px;
-            a {
-                width: 165px;
-                height: 85px;
-                display: block;
-                background: url(http://a0.jmstatic.com/1f9c4c9fa42515c2/logo_new_v1.jpg) no-repeat 0 0;
-                text-indent: -999em;
-            }
-        }
-        .header-search {
-            margin-left: 124px;
-            width: 536px;
-            float: left;
-            position: relative;
-            z-index: 8;
-            height: 82px;
-            padding-top: 28px;
-            .search-line {
-                position: relative;
-                input {
-                    width: 423px;
-                    height: 38px;
-                    padding: 7px 5px;
-                    border: solid #ed145b;
-                    border-width: 3px 0 3px 3px;
-                    float: left;
-                    font-size: 12px;
-                    color: #999;
-                    outline: 0 none;
-                }
-                button {
-                    width: 100px;
-                    height: 38px;
-                    border: 0 none;
-                    color: #fff;
-                    font-size: 14px;
-                    line-height: 38px;
-                    float: left;
-                    background: #ed145b;
-                    cursor: pointer;
-                    padding: 0;
-                }
-            }
-            .hot-word {
+            .logo {
+                width: 130px;
                 overflow: hidden;
-                height: 18px;
-                line-height: 18px;
-                margin-top: 6px;
                 float: left;
-                width: 446px;
-                li {
-                    float: left;
-                    margin-right: 8px;
-                    .line {
-                        overflow: hidden;
-                        width: 1px;
-                        height: 12px;
-                        display: inline-block;
-                        background: #999;
-                        margin: 2px 0 -2px 8px;
-                        padding: 0;
-                    }
-                    a {
-                        color: #999;
-                        text-decoration: none;
-                        &:hover {
-                            color: #ed135d;
-                        }
-                    }
+            }
+            .text {
+                float: left;
+                margin-top: 9px;
+                margin-left: 5px;
+                font-weight: normal;
+                .phone {
+                    font-size: 16px;
+                }
+                .time {
+                    color: grey;
                 }
             }
         }
-        #cart-box {
+        .order_path {
             float: right;
-            margin-top: 33px;
-            position: relative;
-            z-index: 8;
-            a {
-                text-decoration: none;
-                display: block;
-                width: 118px;
-                height: 32px;
-                line-height: 32px;
-                border: 1px solid #e5e5e5;
-                position: relative;
-                background: #fff;
-                z-index: 2;
-                box-shadow: 0 0 2px rgba(0, 0, 0, .2);
-                position: relative;
-                &:hover span {
-                    background: #fff;
-                }
-                &:hover .pay {
-                    display: block;
-                }
-                &:hover s {
-                    transform: rotate(180deg);
-                    transition: .5s;
-                }
-                img {
-                    float: left;
-                    width: 28px;
-                    height: 28px;
-                    overflow: hidden;
-                    vertical-align: bottom;
-                }
-                span {
-                    width: 87px;
-                    height: 30px;
-                    line-height: 32px;
-                    color: #666;
-                    overflow: hidden;
-                    float: left;
-                    padding-left: 6px;
-                    background: #f8f8f8;
-                }
-                s {
-                    transition: .5s;
-                    margin: 4px 0px -2px 5px;
-                    position: absolute;
-                    top: 11px;
-                    right: 2px;
-                    overflow: hidden;
-                    width: 6px;
-                    height: 3px;
-                    background: url(http://a2.jmstatic.com/04418ac031fb4e55/header_newicon1.png) no-repeat;
-                    background-position: 0 0;
-                }
-                .pay {
-                    display: none;
-                    width: 260px;
-                    text-align: center;
-                    padding: 20px;
-                    color: #666;
-                    font-size: 14px;
-                    background: #fff;
-                    overflow: hidden;
-                    // background-color: #ed135d;
-                    position: absolute;
-                    right: 0;
-                    top: 30px;
-                    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-                }
-            }
+            width: 377px;
+            height: 48px;
         }
-    }
-    .headerBottom {
-        height: 38px;
-        clear: both;
-        width: 100%;
-        background: url(http://a1.jmstatic.com/e653901f7f30da9c/nav_new_line.jpg) #000 repeat-x;
-        .shot {
-            display: flex;
-            justify-content: space-between;
-            .left {
-                display: flex;
-                .first {
-                    background: #ed145b;
-                    a {
-                        padding: 0 40px;
-                    }
-                }
-                a {
-                    position: relative;
-                    white-space: nowrap;
-                    display: inline-block;
-                    line-height: 36px;
-                    padding: 0 22px;
-                    height: 38px;
-                    overflow: visible;
-                    color: #fff;
-                    font-size: 14px;
-                    text-decoration: none;
-                    text-align: center;
-                }
-                s {
-                    display: block;
-                    width: 6px;
-                    height: 3px;
-                    background: url(http://a0.jmstatic.com/63376ba7c84b3352/popheadarrow01.png) no-repeat;
-                    position: absolute;
-                    top: 17px;
-                    right: 8px;
-                    transition: .5s;
-                }
-                li:nth-child(4):hover #goodsname {
-                    height: 308px;
-                    transition: .5s;
-                }
-                li:nth-child(4):hover s {
-                    transform: rotate(180deg);
-                    transition: .5s;
-                }
-                li:hover a {
-                    color: #999;
-                    transition: .8s;
-                }
-            }
-            .right {
-                margin-top: 5px;
-                height: 33px;
-                overflow: hidden;
-                display: flex;
-                li {
-                    margin-right: 12px;
-                    width: 30px;
-                    overflow: hidden;
-                    span {
-                        background: url(http://a3.jmstatic.com/0d4bbfe600f8d38b/z_01new.jpg) no-repeat;
-                        display: inline-block;
-                        width: 30px;
-                        height: 30px;
-                        vertical-align: -9px;
-                        margin-right: 3px;
-                    }
-                    .by {
-                        background: url(http://a1.jmstatic.com/79ab7f2d9d35ac68/z03.jpg) no-repeat;
-                    }
-                }
-            }
+        .order_path_1 {
+            background: url(http://f0.jmstatic.com/static_cart/dist/20191009_1/images/order_path.png) no-repeat;
+            background-position: -2px -2px;
         }
-    }
-}
-
-//主体
-.main {
-    background-color: #f7f7f7;
-    margin: 0 auto;
-    h2 {
-        background: url(http://a5.jmstatic.com/c9533ddc6b064f8f/old_top_tit.jpg) center top no-repeat;
-        width: 100%;
-        height: 28px;
-        text-indent: -9999px;
-        overflow: hidden;
-        margin: 20px 0;
-    }
-    .today {
-        border-bottom: 2px solid #000;
-        position: relative;
-        h2 {
-            float: left;
-            height: 25px;
-            background: url(http://a4.jmstatic.com/eaca15a907581788/main_tit02_02.png) #f7f7f7 no-repeat;
-            width: 800px;
-            background-position: 0 -203px;
-            text-indent: -9999px;
-            border: none;
-            margin: 0;
-            position: absolute;
-            top: 2px;
+        .order_path_2 {
+            background: url(http://f0.jmstatic.com/static_cart/dist/20191009_1/images/order_path.png) no-repeat;
+            background-position: -2px -54px;
         }
-        p {
-            float: right;
-            position: relative;
-            top: 5px;
-            right: 0;
-            padding-left: 20px;
-            color: #ed135d;
-            background: url(http://a1.jmstatic.com/14cf1eff35352616/clock.jpg) left 4px no-repeat;
+        .order_path_3 {
+            background: url(http://f0.jmstatic.com/static_cart/dist/20191009_1/images/order_path.png) no-repeat;
+            background-position: -2px -106px;
         }
-    }
-}
-
-.main1 {
-    background-color: #f7f7f7;
-    margin: 0 auto;
-    .today {
-        border-bottom: 2px solid #000;
-        position: relative;
-        h2 {
-            float: left;
-            height: 25px;
-            background: url(http://a4.jmstatic.com/eaca15a907581788/main_tit02_02.png) #f7f7f7 no-repeat;
-            width: 800px;
-            background-position: 0 -174px;
-            text-indent: -9999px;
-            border: none;
-            margin: 0;
-            position: absolute;
-            top: 2px;
-        }
-        p {
-            float: right;
-            position: relative;
-            top: 5px;
-            right: 0;
-            padding-left: 20px;
-            color: #ed135d;
-            background: url(http://a1.jmstatic.com/14cf1eff35352616/clock.jpg) left 4px no-repeat;
+        .order_path_4 {
+            background: url(http://f0.jmstatic.com/static_cart/dist/20191009_1/images/order_path.png) no-repeat;
+            background-position: -2px -158px;
         }
     }
 }
