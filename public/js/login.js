@@ -9,7 +9,7 @@ $('.submit_btn').on('click', function() {
     let password = $.md5($('#password').val());
     $.ajax({
         type: "post",
-        url: "http://localhost:8888/users/reg",
+        url: "http://localhost:8888/users/login",
         data: {
             username: $('#username').val(),
             password: password,

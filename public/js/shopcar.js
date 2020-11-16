@@ -65,17 +65,33 @@ import { baseUrl } from './library/config.js';
                     // i += 1;
                     let a = $(this).parent('.p-num').next('.p-price').html();
                     let b = a.substring(3, 5);
+                    let str = $('.p-sum i').text();
+                    let c = str.replace(/.00/g, ',');
+                    let d = c.slice(0, -1);
+                    let arr2 = d.split(",");
+                    let e = eval(arr2.join('+'));
+                    let f = $(this).parents('.item').siblings('.item').find('.p-sum').children('i').text();
+                    let g = f.replace(/.00/g, ',');
+                    let h = g.slice(0, -1);
+                    let arr3 = h.split(",");
+                    let i = eval(arr3.join('+'));
+                    $('#payoff').text(e.toFixed(2));
                     $(this).prev('.goodsnum').val(+$(this).prev('.goodsnum').val() + 1);
                     // 单个商品总价
                     $(this).parent('.p-num').siblings('.p-sum').children('i').text(($(this).prev('.goodsnum').val() * b).toFixed(2));
                     // 总价
-                    $('#payoff').text((parseInt($(this).parent('.p-num').siblings('.p-sum').children('i').text()) + parseInt($(this).parents('.item').siblings('.item').find('.p-sum').children('i').text())).toFixed(2))
+                    $('#payoff').text((parseInt($(this).parent('.p-num').siblings('.p-sum').children('i').text()) + i).toFixed(2))
                 });
 
                 // 减少商品数量
                 $('.subself').on('click', function() {
                     let a = $(this).parent('.p-num').next('.p-price').html();
                     let b = a.substring(3, 5);
+                    let f = $(this).parents('.item').siblings('.item').find('.p-sum').children('i').text();
+                    let g = f.replace(/.00/g, ',');
+                    let h = g.slice(0, -1);
+                    let arr3 = h.split(",");
+                    let i = eval(arr3.join('+'));
                     if ($(this).next('.goodsnum').val() == 1) {
                         alert('不能再少了')
                     } else {
@@ -83,7 +99,7 @@ import { baseUrl } from './library/config.js';
                         // 单个商品总价
                         $(this).parent('.p-num').siblings('.p-sum').children('i').text(($(this).next('.goodsnum').val() * b).toFixed(2));
                         // 总价
-                        $('#payoff').text((parseInt($(this).parent('.p-num').siblings('.p-sum').children('i').text()) + parseInt($(this).parents('.item').siblings('.item').find('.p-sum').children('i').text())).toFixed(2))
+                        $('#payoff').text((parseInt($(this).parent('.p-num').siblings('.p-sum').children('i').text()) + i).toFixed(2));
                     }
                 });
 
@@ -91,22 +107,42 @@ import { baseUrl } from './library/config.js';
 
 
                 //全选功能
+                ! function($) {
+                    const all = $('.all'); //全选按钮
+                    const inputs = $(':checkbox').not('.all') //除了全选按钮之外的input
+                        //1.点击全选按钮
+                    all.on('click', function() {
+                        inputs.prop('checked', $(this).prop('checked'));
+                        all.prop('checked', $(this).prop('checked'));
+                    });
+                    //2.下面所有的复选框选中，全选对应的选择
+                    inputs.on('click', function() {
+                        // let p = $(this).parent('.p-box').siblings('.p-sum').children('i').text();
+                        if ($('input:checked').not('.all').length === inputs.length) {
+                            all.prop('checked', true);
+                        } else {
+                            all.prop('checked', false);
+                            // $('#payoff').text(p)
+                        }
+                    });
 
+                }(jQuery);
 
                 //删除功能
                 $('.p-del a').on('click', function() {
-                    console.log($(this).parent('.p-del').attr('value'));
-                    console.log(cookie);
-                    cookie.remove($(this).parent('.p-del').attr('value'))
+                    let a = cookie.get('shop');
+                    //对应需要删除的cookie的id值
+                    let b = $(this).parent('.p-del').attr('value');
+                    let arr3 = JSON.parse(a);
+                    console.log(arr3);
+                    cookie.set()
+                        // 删除网页中的对应商品
+                    $(this).parents('.item').remove();
+                    //删除缓存中的cookie
                 })
 
                 //商品初始总价
-                let str = $('.p-sum i').text();
-                let c = str.replace(/.00/g, ',');
-                let d = c.slice(0, -1);
-                let arr2 = d.split(",");
-                let e = eval(arr2.join('+'));
-                $('#payoff').text(e.toFixed(2));
+                $('#payoff').text(0);
             }
         });
     }

@@ -58,7 +58,7 @@
                         </div>
                         <div class="line">
                             <div class="textbox_ui">
-                                <input type="password" placeholder="密码" id="password" autocomplete="off">
+                                <input type="password" id="password" placeholder="密码" autocomplete="off">
                                 <div class="focus_text">
                                     <p class="default">6-16个字符，建议使用字母加数字或符号组合</p>
                                     <div class="safe">
@@ -73,6 +73,9 @@
                                 <div class="invalid" style="display: none;">
                                     <i></i>
                                     <div class="msg"></div>
+                                    <div id="msg_red" style="float: left;">弱</div>
+                                    <div id="msg_yellow" style="float: left;">中</div>
+                                    <div id="msg_green" style="float: left;">强</div>
                                 </div>
                             </div>
                         </div>
@@ -103,7 +106,6 @@
                 </div>
             </div>
         </div>
-        <button class="btn">按钮</button>
     </div>
     <div class="footer">
         <div class="container">
@@ -119,7 +121,7 @@
                     <a href="javascript:void(0)" class="footer_copy_logo logo04" rel="nofollow"></a>
                     <a href="https://ss.knet.cn/verifyseal.dll?sn=e1908021101057894518jv000000&amp;ct=df&amp;pa=nU60yFg7nXl37yQG" target="_blank" class="footer_copy_logo logo05" rel="nofollow"></a>
                 </p>
-                <script>
+                <!-- <script>
                     function change_urlknet(eleId) {
                         var str = document.getElementById(eleId).href;
                         var str1 = str.substring(0, (str.length - 6));
@@ -134,7 +136,7 @@
                         }
                         return rnd;
                     }
-                </script>
+                </script> -->
             </div>
         </div>
     </div>
